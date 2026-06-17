@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/* ── Custom design tokens ───────────────────────────────────────────── */
+@theme {
+  --color-navy-950: #040c1a;
+  --color-navy-900: #071323;
+  --color-navy-800: #0d1f3c;
+  --color-navy-750: #112548;
+  --color-navy-700: #132d56;
+  --color-navy-600: #1a3d70;
+  --color-navy-500: #1e4d8c;
+  --color-navy-400: #2563ab;
+  --color-navy-300: #3b82c4;
+
+  --color-accent-500: #0ea5e9;
+  --color-accent-400: #38bdf8;
+  --color-accent-300: #7dd3fc;
+}
+
+/* ── Font variables — resolved at runtime from Google Fonts <link> ─── */
+:root {
+  --font-jakarta:   'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-inter:     'Inter', system-ui, -apple-system, sans-serif;
+  --font-jetbrains: 'JetBrains Mono', 'Menlo', 'Consolas', monospace;
+}
+
+@theme inline {
+  --font-sans:    var(--font-inter);
+  --font-display: var(--font-jakarta);
+  --font-mono:    var(--font-jetbrains);
+}
+
+/* ── Base ────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: #ffffff;
+  color: #0f172a;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+::selection {
+  background-color: #0ea5e9;
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 2px solid #0ea5e9;
+  outline-offset: 3px;
+}
+
+/* ── Hero dot-grid texture ──────────────────────────────────────────── */
+.hero-grid {
+  background-image: radial-gradient(
+    circle,
+    rgba(19, 45, 86, 0.55) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+}
+
+/* ── CSS-only fade-up for above-the-fold hero content ───────────────── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+.animate-fade-up     { animation: fade-up 0.65s cubic-bezier(0.25, 0.1, 0.25, 1) both; }
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+.animation-delay-500 { animation-delay: 500ms; }
+
+/* ── Scrollbar ──────────────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 3px; }
+
+/* ── Reduced motion ─────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up { animation: none; opacity: 1; transform: none; }
+}
