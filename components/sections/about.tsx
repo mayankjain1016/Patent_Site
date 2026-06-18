@@ -1,4 +1,4 @@
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, ShieldCheck, Cpu, Award, MapPin } from 'lucide-react';
 import { SectionOverline } from '@/components/ui/badge';
 import { Reveal } from '@/components/ui/reveal';
 
@@ -10,81 +10,101 @@ const differentiators = [
   'Flexible support through remote discussions and in-office consultations in Agra',
 ];
 
+const credentials = [
+  { icon: Cpu, label: 'B.E. Computer Science', sublabel: 'Since 2002' },
+  { icon: ShieldCheck, label: 'Registered Patent Agent', sublabel: 'Since 2008' },
+  { icon: Award, label: 'Embedded Systems', sublabel: 'Certified Course' },
+  { icon: MapPin, label: 'MSME-Registered', sublabel: 'Agra, UP' },
+];
+
 export function About() {
   return (
-    <section id="about" className="py-20 md:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+    <section id="about" className="relative bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-8">
 
-          {/* Left column: Section identity */}
-          <Reveal>
-            <SectionOverline>About Vicky Infotech</SectionOverline>
-            <h2 className="font-display font-bold text-navy-900 text-3xl md:text-4xl tracking-tight leading-[1.15] mb-6">
-              An MSME-Based IPR Consultancy Built on Technical Depth
-            </h2>
+          {/* Left Column: Narrative & Mission */}
+          <div className="lg:col-span-5 flex flex-col">
+            <Reveal>
+              <SectionOverline>About Vicky Infotech</SectionOverline>
 
-            {/* Pull quote */}
-            <blockquote className="border-l-2 border-accent-500 pl-5 mb-8">
-              <p className="text-slate-500 text-sm font-mono tracking-wide uppercase leading-relaxed">
-                &ldquo;The focus is to support innovators with technically sound, 
-                well-structured, and business-relevant patent research.&rdquo;
-              </p>
-            </blockquote>
+              <h2 className="mt-6 font-sans text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl text-balance">
+                An MSME-Based IPR Consultancy Built on Technical Depth
+              </h2>
 
-            <div className="prose prose-slate max-w-none">
-              <p className="text-slate-600 leading-[1.8] mb-4">
-                Vicky Infotech is an MSME-based IPR consultancy located in Sikandra, Agra. 
-                The firm is founded and managed by Vipin Kumar, a Computer Science Engineer 
-                and Registered Patent Agent with extensive experience in patent search, 
-                patent drafting, prosecution support, patent landscaping, invalidation 
-                analysis, and technology-focused IP strategy.
-              </p>
-              <p className="text-slate-600 leading-[1.8]">
-                Whether you are preparing to file a patent application, evaluating 
-                novelty before investing in a product, or supporting a legal matter 
-                requiring prior art evidence — Vicky Infotech delivers clear searches, 
-                practical insights, and stronger patent decisions.
-              </p>
-            </div>
-          </Reveal>
+              <div className="mt-6 flex flex-col gap-6">
+                <p className="text-base leading-relaxed text-slate-600">
+                  Vicky Infotech is an MSME-based IPR consultancy located in Sikandra, Agra.
+                  The firm is founded and managed by Vipin Kumar, a Computer Science Engineer
+                  and Registered Patent Agent with extensive experience in patent search,
+                  patent drafting, prosecution support, patent landscaping, invalidation
+                  analysis, and technology-focused IP strategy.
+                </p>
 
-          {/* Right column: Why choose */}
-          <Reveal delay={0.12}>
-            <div className="bg-slate-50 p-8 lg:p-10">
-              <h3 className="font-display font-semibold text-navy-900 text-lg mb-6">
-                Why Patent Professionals Trust Vicky Infotech
-              </h3>
-              <ul className="flex flex-col gap-5" role="list">
-                {differentiators.map((point, i) => (
-                  <li key={i} className="flex items-start gap-4">
-                    <CheckCircle2
-                      size={16}
-                      className="mt-1 shrink-0 text-accent-500"
-                      strokeWidth={2}
-                    />
-                    <p className="text-slate-600 text-sm leading-[1.75]">{point}</p>
-                  </li>
-                ))}
-              </ul>
+                {/* Elevated Mission Quote - Replaces the duplicate paragraph blockquote */}
+                <div className="relative mt-2 rounded-2xl border border-slate-100 bg-slate-50/50 p-6 shadow-sm">
+                  <div className="absolute -left-1.5 top-6 h-8 w-1 rounded-r-full bg-blue-600" aria-hidden="true" />
+                  <p className="font-mono text-sm leading-relaxed text-slate-700">
+                    "Our focus is to support innovators with technically sound, well-structured,
+                    and business-relevant patent research that helps them understand the strength,
+                    novelty, and competitive context of their inventions."
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          </div>
 
-              {/* Credential strip */}
-              <div className="mt-8 pt-6 border-t border-slate-200 grid grid-cols-2 gap-4">
-                {[
-                  { label: 'B.E. Computer Science', sublabel: 'Since 2002' },
-                  { label: 'Registered Patent Agent', sublabel: 'Since 2008' },
-                  { label: 'MSME-Registered Firm', sublabel: 'Agra, UP' },
-                  { label: 'Embedded Systems', sublabel: 'Certified Course' },
-                ].map(({ label, sublabel }) => (
-                  <div key={label} className="bg-white p-3 border border-slate-200">
-                    <p className="text-xs font-semibold text-navy-900">{label}</p>
-                    <p className="font-mono text-[10px] tracking-wide text-slate-400 mt-0.5 uppercase">
-                      {sublabel}
-                    </p>
+          {/* Spacer Column for Desktop */}
+          <div className="hidden lg:block lg:col-span-1" />
+
+          {/* Right Column: Differentiators & Trust Signals */}
+          <div className="lg:col-span-6 flex flex-col justify-center">
+
+            {/* Credentials Grid - Elevated to the top for immediate trust */}
+            <Reveal delay={0.1}>
+              <div className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {credentials.map((cred, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-4 transition-shadow hover:shadow-md"
+                  >
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-50 border border-slate-100">
+                      <cred.icon className="h-5 w-5 text-blue-600" />
+                    </div>
+                    <div>
+                      <p className="font-sans text-sm font-semibold text-slate-900">{cred.label}</p>
+                      <p className="mt-1 font-mono text-xs uppercase tracking-wider text-slate-500">
+                        {cred.sublabel}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
+
+            {/* Differentiators List - Styled as a technical spec sheet */}
+            <Reveal delay={0.2}>
+              <h3 className="font-sans text-sm font-semibold uppercase tracking-widest text-slate-950 mb-6">
+                Why Professionals Trust Us
+              </h3>
+
+              <ul className="flex flex-col divide-y divide-slate-100" role="list">
+                {differentiators.map((point, i) => (
+                  <li key={i} className="flex gap-x-4 py-4 first:pt-0 last:pb-0">
+                    <CheckCircle2
+                      className="mt-0.5 h-5 w-5 flex-none text-blue-600"
+                      strokeWidth={2}
+                      aria-hidden="true"
+                    />
+                    <span className="text-sm leading-relaxed text-slate-600">
+                      {point}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+
+          </div>
         </div>
       </div>
     </section>

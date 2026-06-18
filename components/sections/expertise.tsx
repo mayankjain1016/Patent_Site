@@ -1,54 +1,59 @@
+import { Layers, Search } from 'lucide-react';
 import { SectionOverline } from '@/components/ui/badge';
 import { Reveal, StaggerContainer, StaggerItem } from '@/components/ui/reveal';
 import { EXPERTISE_DOMAINS } from '@/constants/site';
 
 export function Expertise() {
   return (
-    <section id="expertise" className="py-20 md:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="expertise" className="bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
-        {/* Header */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 mb-16">
-          <Reveal>
-            <SectionOverline>Technical Expertise</SectionOverline>
-            <h2 className="font-display font-bold text-navy-900 text-3xl md:text-4xl tracking-tight leading-[1.15]">
-              Deep Domain Coverage Across Technology Fields
-            </h2>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <p className="text-slate-500 leading-[1.85] lg:mt-14">
-              Patent research requires understanding the invention at a technical level. 
-              With a B.E. in Computer Science and hands-on knowledge of embedded systems, 
-              the research covers the full breadth of modern technology fields — from 
-              algorithms and hardware to AI, IoT, cybersecurity, and cross-domain inventions 
-              touching electronics, physics, and thermal science.
-            </p>
-          </Reveal>
+        {/* Engineered Header Layout */}
+        <div className="mb-16 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-16">
+          <div className="lg:w-1/2">
+            <Reveal>
+              <SectionOverline>Technical Expertise</SectionOverline>
+              <h2 className="mt-6 font-sans text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl text-balance">
+                Deep Domain Coverage Across Technology Fields
+              </h2>
+            </Reveal>
+          </div>
+
+          <div className="lg:w-1/2">
+            <Reveal delay={0.1}>
+              <p className="text-base leading-relaxed text-slate-600 text-pretty">
+                Patent research requires understanding the invention at a technical level.
+                With a B.E. in Computer Science and hands-on knowledge of embedded systems,
+                our research covers the full breadth of modern technology fields — from
+                algorithms and hardware to AI, IoT, cybersecurity, and cross-domain inventions
+                touching electronics, physics, and thermal science.
+              </p>
+            </Reveal>
+          </div>
         </div>
 
-        {/* Expertise domains */}
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+        {/* Capability Matrix (Grid) */}
+        <StaggerContainer className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {EXPERTISE_DOMAINS.map((domain, idx) => (
             <StaggerItem key={domain.domain}>
-              <div className="group h-full">
-                {/* Domain header */}
-                <div className="flex items-center gap-3 mb-5">
-                  <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-slate-300">
+              <div className="flex h-full flex-col rounded-2xl border border-slate-200/60 bg-slate-50/50 p-6 sm:p-8">
+
+                {/* Domain Header */}
+                <div className="mb-6 flex items-center justify-between">
+                  <h3 className="font-sans text-base font-semibold text-slate-900">
+                    {domain.domain}
+                  </h3>
+                  <span className="font-mono text-xs font-medium text-slate-400">
                     {String(idx + 1).padStart(2, '0')}
                   </span>
-                  <div className="flex-1 h-px bg-slate-200" />
                 </div>
 
-                <h3 className="font-display font-semibold text-navy-900 text-sm mb-4">
-                  {domain.domain}
-                </h3>
-
-                {/* Topic tags */}
-                <div className="flex flex-wrap gap-2">
+                {/* Data Tokens (Tags) */}
+                <div className="mt-auto flex flex-wrap gap-2">
                   {domain.topics.map((topic) => (
                     <span
                       key={topic}
-                      className="inline-block px-2.5 py-1 bg-slate-50 border border-slate-200 text-slate-600 text-xs leading-none"
+                      className="inline-flex items-center rounded-md border border-slate-200/60 bg-white px-2.5 py-1 font-sans text-xs font-medium text-slate-600"
                     >
                       {topic}
                     </span>
@@ -59,25 +64,51 @@ export function Expertise() {
           ))}
         </StaggerContainer>
 
-        {/* Cross-domain note */}
-        <Reveal delay={0.15} className="mt-14 pt-10 border-t border-slate-200">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <p className="text-slate-500 text-sm leading-relaxed max-w-xl">
-              <span className="font-semibold text-navy-900">Cross-domain capability: </span>
-              Many inventions span multiple fields. Prior art searches also extend into 
-              electronics, signal systems, analog interfaces, physics, chemistry, 
-              and thermal science where the invention concept crosses technical boundaries.
-            </p>
-            <div className="shrink-0">
-              <div className="font-mono text-[10px] tracking-[0.18em] uppercase text-slate-400">
-                Methodology
+        {/* Dark Mode System Callout Banner */}
+        <Reveal delay={0.15}>
+          <div className="mt-16 flex flex-col gap-8 rounded-2xl bg-slate-950 p-6 sm:p-8 md:flex-row md:items-center md:justify-between shadow-xl">
+
+            {/* Left: Cross-domain explanation */}
+            <div className="flex max-w-2xl items-start gap-4">
+              <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10 text-white">
+                <Layers className="h-4 w-4" strokeWidth={2} aria-hidden="true" />
               </div>
-              <p className="text-sm font-semibold text-navy-900 mt-1">
-                IPC · CPC · Keyword · Assignee Search
-              </p>
+              <div>
+                <p className="text-sm font-semibold text-white">
+                  Cross-Domain Capability
+                </p>
+                <p className="mt-1 text-sm leading-relaxed text-slate-400">
+                  Many inventions span multiple fields. Prior art searches extend into
+                  electronics, signal systems, analog interfaces, physics, chemistry,
+                  and thermal science where the invention concept crosses boundaries.
+                </p>
+              </div>
             </div>
+
+            {/* Right: Search Methodology Specs */}
+            <div className="flex items-start gap-4 md:shrink-0 md:border-l md:border-white/10 md:pl-8">
+              <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10 text-white">
+                <Search className="h-4 w-4" strokeWidth={2} aria-hidden="true" />
+              </div>
+              <div>
+                <p className="font-mono text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                  Search Methodology
+                </p>
+                <ul className="mt-2 flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs font-medium text-slate-300">
+                  <li>IPC</li>
+                  <li className="text-slate-600">•</li>
+                  <li>CPC</li>
+                  <li className="text-slate-600">•</li>
+                  <li>Keyword</li>
+                  <li className="text-slate-600">•</li>
+                  <li>Assignee</li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </Reveal>
+
       </div>
     </section>
   );

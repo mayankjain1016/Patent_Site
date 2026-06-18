@@ -176,38 +176,37 @@ export const PROCESS_STEPS: ProcessStep[] = [
   {
     step: 1,
     title: 'Understand the Invention',
-    description:
-      'Review the invention disclosure, key features, problem solved, and technical advantages to establish a clear research baseline.',
+    description: 'Review the invention disclosure, key features, problem solved, and technical advantages',
   },
   {
     step: 2,
     title: 'Define the Search Strategy',
     description:
-      'Identify keywords, classifications, assignees, inventors, technical synonyms, and relevant patent classes for exhaustive coverage.',
+      'Identify keywords, classifications, assignees, inventors, technical synonyms, and relevant patent classes',
   },
   {
     step: 3,
     title: 'Search Patent Databases',
     description:
-      'Use free and paid patent database sources covering global patent publications and granted patents — over 120 million documents worldwide.',
+      'Use free and paid patent database sources covering global patent publications and granted patents.',
   },
   {
     step: 4,
     title: 'Filter & Analyze References',
     description:
-      'Shortlist the most relevant patent documents and compare them against the disclosed invention with structured technical mapping.',
+      'Shortlist the most relevant patent documents and compare them with the disclosed invention.',
   },
   {
     step: 5,
     title: 'Prepare the Report',
     description:
-      'Present key references, relevance notes, and practical observations in a structured, decision-ready search report.',
+      'Present key references, relevance notes, and practical observations in a structured search report.',
   },
   {
     step: 6,
     title: 'Discuss Findings',
     description:
-      'Provide optional remote or in-office support to help inventors understand the cited references and plan their next steps with confidence.',
+      'Provide optional remote or in-office support to help inventors understand the cited references',
   },
 ];
 

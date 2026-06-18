@@ -1,52 +1,65 @@
 import { SectionOverline } from '@/components/ui/badge';
 import { Reveal, StaggerContainer, StaggerItem } from '@/components/ui/reveal';
-import { CLIENT_TYPES } from '@/constants/site';
+import { CLIENT_TYPES } from '@/constants/site'; // { Icon, title, description }
 
 export function WhoWeHelp() {
   return (
-    <section id="clients" className="py-20 md:py-28 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="clients" className="bg-slate-50 py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
-        {/* Header */}
-        <Reveal className="mb-14">
-          <SectionOverline>Who We Help</SectionOverline>
-          <div className="grid md:grid-cols-2 gap-6 md:gap-16 items-end">
-            <h2 className="font-display font-bold text-navy-900 text-3xl md:text-4xl tracking-tight leading-[1.15]">
-              Supporting Inventors, Businesses & Legal Teams
-            </h2>
-            <p className="text-slate-500 leading-[1.8]">
-              Patent intelligence is not just for large corporations. 
-              Vicky Infotech works with individual inventors, startups, 
-              R&amp;D teams, law firms, and technology businesses at 
-              every stage of the innovation lifecycle.
-            </p>
+        {/* Engineered Header Layout (Matches Expertise & Process sections) */}
+        <div className="mb-16 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-16">
+          <div className="lg:w-1/2">
+            <Reveal>
+              <SectionOverline>Who We Help</SectionOverline>
+              <h2 className="mt-6 font-sans text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl text-balance">
+                Supporting Inventors, Businesses & Legal Teams
+              </h2>
+            </Reveal>
           </div>
-        </Reveal>
 
-        {/* Client type cards */}
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="lg:w-1/2">
+            <Reveal delay={0.1}>
+              <p className="text-base leading-relaxed text-slate-600 text-pretty">
+                Patent intelligence is not just for large corporations.
+                Vicky Infotech works with individual inventors, startups,
+                R&amp;D teams, law firms, and technology businesses at
+                every stage of the innovation lifecycle.
+              </p>
+            </Reveal>
+          </div>
+        </div>
+
+        {/* Audience Profile Cards Grid */}
+        <StaggerContainer className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {CLIENT_TYPES.map(({ Icon, title, description }) => (
             <StaggerItem key={title}>
-              <div className="group bg-white p-7 border border-slate-200 hover:border-navy-700 transition-all duration-200 h-full flex flex-col gap-5">
-                {/* Icon */}
-                <div className="w-10 h-10 border border-slate-200 group-hover:border-navy-700 flex items-center justify-center transition-colors duration-200 shrink-0">
+              <div className="group relative flex h-full flex-col rounded-2xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-300">
+
+                {/* Premium Icon Container */}
+                <div className="mb-6 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-slate-100 bg-slate-50 transition-colors duration-300 group-hover:border-blue-100 group-hover:bg-blue-50/50">
                   <Icon
-                    size={18}
-                    strokeWidth={1.75}
-                    className="text-navy-700 group-hover:text-accent-500 transition-colors duration-200"
+                    className="h-6 w-6 text-slate-500 transition-colors duration-300 group-hover:text-blue-600"
+                    strokeWidth={1.5}
+                    aria-hidden="true"
                   />
                 </div>
 
+                {/* Content */}
                 <div>
-                  <h3 className="font-display font-semibold text-navy-900 text-sm mb-2">
+                  <h3 className="mb-3 font-sans text-base font-semibold text-slate-900">
                     {title}
                   </h3>
-                  <p className="text-slate-500 text-sm leading-[1.8]">{description}</p>
+                  <p className="text-sm leading-relaxed text-slate-600">
+                    {description}
+                  </p>
                 </div>
+
               </div>
             </StaggerItem>
           ))}
         </StaggerContainer>
+
       </div>
     </section>
   );

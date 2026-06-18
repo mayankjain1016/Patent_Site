@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { GraduationCap, Shield, Cpu, Search, Award, BookOpen } from 'lucide-react';
 import { SectionOverline } from '@/components/ui/badge';
 import { Reveal } from '@/components/ui/reveal';
@@ -30,7 +31,7 @@ const credentials = [
   {
     Icon: Award,
     title: 'Patent Search Expert',
-    subtitle: 'Novelty · Inventive Step · Industrial Applicability',
+    subtitle: 'Novelty · Inventive Step',
     detail: 'Structured analysis across all three patentability criteria for each search',
   },
   {
@@ -43,91 +44,103 @@ const credentials = [
 
 export function Founder() {
   return (
-    <section id="founder" className="py-20 md:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="founder" className="bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
-        <div className="grid lg:grid-cols-[auto_1fr] gap-16 lg:gap-24 items-start">
+        {/* 12-Column Grid Architecture */}
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-12 xl:gap-16 items-start">
 
-          {/* Left: Profile */}
-          <Reveal className="lg:sticky lg:top-24">
-            <div className="max-w-xs">
+          {/* Left Column: Sticky Executive Profile */}
+          <div className="lg:col-span-4 xl:col-span-4 lg:sticky lg:top-32">
+            <Reveal>
+              <div className="flex flex-col">
+                {/* Optimized Profile Image Container */}
+                <div className="relative mb-6 aspect-[4/5] w-full max-w-[320px] overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-sm">
+                  <Image
+                    src="/images/vipin.jpg"
+                    alt="Vipin Kumar - Founder of Vicky Infotech"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 320px"
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                    priority
+                  />
+                </div>
 
-              {/* Photo placeholder */}
-              <div className="w-full aspect-[3/4] max-w-[240px] bg-navy-900 flex flex-col items-center justify-center mb-6 relative">
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    backgroundImage:
-                      'radial-gradient(circle, rgba(19,45,86,0.5) 1px, transparent 1px)',
-                    backgroundSize: '16px 16px',
-                  }}
-                />
-                <div className="relative text-center px-4">
-                  <div className="font-display font-bold text-white text-5xl tracking-tight">
-                    VK
-                  </div>
-                  <div className="font-mono text-[9px] tracking-[0.2em] uppercase text-navy-400 mt-2">
-                    Vipin Kumar
-                  </div>
+                {/* Identity Metadata */}
+                <h2 className="font-sans text-2xl font-semibold tracking-tight text-slate-900">
+                  Vipin Kumar
+                </h2>
+                <p className="mt-1 text-sm font-medium text-slate-500">
+                  Founder, Vicky Infotech
+                </p>
+
+                {/* Premium Status Badge */}
+                <div className="mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 shadow-sm">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75" aria-hidden="true" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-500" aria-hidden="true" />
+                  </span>
+                  <span className="font-mono text-xs font-semibold uppercase tracking-wider text-slate-600">
+                    Registered Patent Agent
+                  </span>
                 </div>
               </div>
+            </Reveal>
+          </div>
 
-              {/* Name & title */}
-              <h2 className="font-display font-bold text-navy-900 text-2xl tracking-tight mb-1">
-                Vipin Kumar
-              </h2>
-              <p className="text-slate-500 text-sm">
-                Founder, Vicky Infotech
-              </p>
-              <div className="mt-3 inline-flex items-center gap-2 border border-slate-200 px-3 py-1.5">
-                <div className="w-1.5 h-1.5 rounded-full bg-accent-500" />
-                <span className="font-mono text-[9px] tracking-[0.18em] uppercase text-slate-500">
-                  Registered Patent Agent
-                </span>
-              </div>
-            </div>
-          </Reveal>
-
-          {/* Right: Credentials + bio */}
-          <div>
+          {/* Right Column: Narrative & Credentials */}
+          <div className="lg:col-span-8 xl:col-span-8 flex flex-col">
             <Reveal>
               <SectionOverline>The Expert Behind the Research</SectionOverline>
-              <h2 className="font-display font-bold text-navy-900 text-3xl md:text-4xl tracking-tight leading-[1.15] mb-6">
+              <h2 className="mt-6 font-sans text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl text-balance">
                 Technical Authority in Patent Search & Prior Art Analysis
               </h2>
-              <div className="prose prose-slate max-w-none mb-10">
-                <p className="text-slate-600 leading-[1.85]">
-                  Vipin Kumar holds a B.E. in Computer Science, completed in 2002, and has been a Registered Patent Agent since 2008. He has extensive experience in conducting patent searches and prior art searches. After completing his B.E. degree, he also completed a course in Embedded Systems. Vipin provides prior art search services across various computer science topics to support inventors in filing patent applications. His focus is exclusively on delivering patent search services with detailed analysis of novelty, inventive step/non-obviousness, and industrial applicability. These services help inventors understand, in advance, who their competitors are and what information related to their inventions is already available in the public domain, enabling them to rework or work around existing knowledge to improve their inventions.
+
+              {/* Typeset Bio Narrative */}
+              <div className="mt-8 text-base leading-relaxed text-slate-600 text-pretty">
+                <p className="mb-4">
+                  Vipin Kumar holds a B.E. in Computer Science, completed in 2002, and has been a Registered Patent Agent since 2008. He has extensive experience in conducting patent searches and prior art searches. After completing his B.E. degree, he also completed a course in Embedded Systems.
+                </p>
+                <p>
+                  Vipin provides prior art search services across various computer science topics to support inventors in filing patent applications. His focus is exclusively on delivering patent search services with detailed analysis of novelty, inventive step/non-obviousness, and industrial applicability. These services help inventors understand, in advance, who their competitors are and what information related to their inventions is already available in the public domain, enabling them to rework or work around existing knowledge to improve their inventions.
                 </p>
               </div>
             </Reveal>
 
-            {/* Credentials grid */}
-            <Reveal delay={0.1}>
-              <div className="grid sm:grid-cols-2 gap-px bg-slate-200">
-                {credentials.map(({ Icon, title, subtitle, detail }) => (
-                  <div
-                    key={title}
-                    className="bg-white p-6 flex flex-col gap-3"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="p-2 bg-slate-50 border border-slate-200 shrink-0">
-                        <Icon size={16} strokeWidth={1.75} className="text-navy-700" />
+            {/* Structured Credentials Matrix */}
+            <Reveal delay={0.1} className="mt-16">
+              <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 shadow-sm">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-px">
+                  {credentials.map(({ Icon, title, subtitle, detail }) => (
+                    <div
+                      key={title}
+                      className="flex flex-col bg-white p-6 sm:p-8 transition-colors duration-200 hover:bg-slate-50/50"
+                    >
+                      {/* Credential Header */}
+                      <div className="mb-4 flex items-center gap-4">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-slate-100 bg-slate-50 text-blue-600">
+                          <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />
+                        </div>
+                        <div>
+                          <h3 className="font-sans text-sm font-semibold text-slate-900">
+                            {title}
+                          </h3>
+                          <p className="mt-0.5 font-mono text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                            {subtitle}
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <p className="font-display font-semibold text-navy-900 text-sm">
-                          {title}
-                        </p>
-                        <p className="font-mono text-[10px] tracking-wide uppercase text-accent-500 mt-0.5">
-                          {subtitle}
-                        </p>
-                      </div>
+
+                      {/* Credential Detail */}
+                      <p className="text-sm leading-relaxed text-slate-600">
+                        {detail}
+                      </p>
                     </div>
-                    <p className="text-slate-500 text-xs leading-relaxed pl-10">{detail}</p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </Reveal>
+
           </div>
         </div>
       </div>

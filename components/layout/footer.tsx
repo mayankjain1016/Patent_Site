@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { CONTACT, NAV_LINKS, SITE_NAME, SITE_TAGLINE } from '@/constants/site';
 
@@ -13,8 +14,14 @@ export function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2.5 mb-5">
-              <div className="flex items-center justify-center w-8 h-8 bg-white text-navy-900 text-xs font-bold font-mono shrink-0">
-                VI
+              <div className="relative w-12 h-12 shrink-0 rounded-md overflow-hidden border border-slate-800 bg-white">
+                <Image
+                  src="/images/logo.jpg"
+                  alt={`${SITE_NAME} Logo`}
+                  fill
+                  sizes="48px"
+                  className="object-cover"
+                />
               </div>
               <span className="font-display font-semibold text-sm tracking-tight text-white">
                 {SITE_NAME}

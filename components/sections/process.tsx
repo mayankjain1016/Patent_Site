@@ -1,96 +1,120 @@
+import { Database, LayoutTemplate, FileSearch } from 'lucide-react';
 import { SectionOverline } from '@/components/ui/badge';
 import { Reveal, StaggerContainer, StaggerItem } from '@/components/ui/reveal';
-import { PROCESS_STEPS } from '@/constants/site';
+import { PROCESS_STEPS } from '@/constants/site'; // { step: string/number, title: string, description: string }
 
 export function Process() {
   return (
-    <section id="process" className="py-20 md:py-28 bg-navy-950">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="process" className="bg-slate-950 py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
-        {/* Header */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 mb-16">
-          <Reveal>
-            <SectionOverline light>Our Search Process</SectionOverline>
-            <h2 className="font-display font-bold text-white text-3xl md:text-4xl tracking-tight leading-[1.15]">
-              A Systematic Research Methodology Built for Accuracy
-            </h2>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <p className="text-slate-400 leading-[1.85] lg:mt-14">
-              Patent searches are conducted using both free and paid patent database 
-              sources covering global patent records across more than 120 million 
-              published documents. Every search follows a structured, repeatable 
-              process to ensure the most relevant prior art is identified and 
-              clearly communicated.
-            </p>
-          </Reveal>
+        {/* Engineered Header Layout */}
+        <div className="mb-16 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-16">
+          <div className="lg:w-1/2">
+            <Reveal>
+              {/* Assuming `light` prop makes your badge suitable for dark backgrounds */}
+              <SectionOverline light>Our Search Process</SectionOverline>
+              <h2 className="mt-6 font-sans text-3xl font-semibold tracking-tight text-white sm:text-4xl text-balance">
+                A Systematic Research Methodology Built for Accuracy
+              </h2>
+            </Reveal>
+          </div>
+
+          <div className="lg:w-1/2">
+            <Reveal delay={0.1}>
+              <p className="text-base leading-relaxed text-slate-400 text-pretty">
+                Patent searches are conducted using both free and paid patent database
+                sources covering global patent records across more than 120 million
+                published documents. Every search follows a structured, repeatable
+                process to ensure the most relevant prior art is identified and
+                clearly communicated.
+              </p>
+            </Reveal>
+          </div>
         </div>
 
-        {/* Steps */}
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-px bg-navy-800">
-          {PROCESS_STEPS.map((step) => (
-            <StaggerItem key={step.step}>
-              <div className="group bg-navy-950 p-8 lg:p-10 h-full relative overflow-hidden">
+        {/* Execution Pipeline (Grid) */}
+        <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-px">
+            {PROCESS_STEPS.map((step, idx) => (
+              <StaggerItem key={step.step}>
+                <div className="group relative flex h-full flex-col bg-slate-950 p-8 transition-colors duration-300 hover:bg-white/[0.02] sm:p-10">
 
-                {/* Large background step number */}
-                <div
-                  className="absolute -top-4 -right-2 font-display font-bold text-navy-800 select-none pointer-events-none"
-                  style={{ fontSize: '7rem', lineHeight: 1 }}
-                  aria-hidden="true"
-                >
-                  {step.step}
-                </div>
-
-                {/* Step indicator */}
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-6 h-6 border border-navy-600 flex items-center justify-center">
-                    <span className="font-mono text-[9px] text-navy-400">{step.step}</span>
+                  {/* Node Header (Connects visually across the grid) */}
+                  <div className="mb-8 flex items-center gap-4">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-blue-500/30 bg-blue-500/10 font-mono text-xs font-semibold text-blue-400 transition-colors duration-300 group-hover:border-blue-500/50 group-hover:bg-blue-500/20 group-hover:text-blue-300">
+                      {step.step}
+                    </div>
+                    {/* Visual connecting line (only rightward) */}
+                    <div className="h-px flex-1 bg-white/5 transition-colors duration-300 group-hover:bg-white/10" aria-hidden="true" />
                   </div>
-                  <div className="flex-1 h-px bg-navy-800" />
-                </div>
 
-                <h3 className="font-display font-semibold text-white text-base mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-slate-400 text-sm leading-[1.85]">
-                  {step.description}
-                </p>
-
-                {/* Hover accent line */}
-                <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-navy-800 group-hover:bg-accent-500 transition-colors duration-300" />
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-
-        {/* Methodology note */}
-        <Reveal delay={0.1} className="mt-12">
-          <div className="border border-navy-800 p-6 md:p-8">
-            <div className="grid md:grid-cols-3 gap-6 md:gap-10">
-              {[
-                {
-                  label: 'Database Coverage',
-                  value: '120M+ patent documents across global jurisdictions',
-                },
-                {
-                  label: 'Search Sources',
-                  value: 'Free and paid patent database sources',
-                },
-                {
-                  label: 'Delivery Format',
-                  value: 'Structured report with key references and relevance notes',
-                },
-              ].map(({ label, value }) => (
-                <div key={label}>
-                  <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-navy-400 mb-2">
-                    {label}
+                  {/* Content */}
+                  <h3 className="mb-3 font-sans text-lg font-semibold text-slate-200">
+                    {step.title}
+                  </h3>
+                  <p className="flex-1 text-sm leading-relaxed text-slate-400">
+                    {step.description}
                   </p>
-                  <p className="text-slate-300 text-sm leading-relaxed">{value}</p>
+
                 </div>
-              ))}
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+
+        {/* Telemetry Footer (Methodology Note) */}
+        <Reveal delay={0.15}>
+          <div className="mt-12 grid grid-cols-1 divide-y divide-white/5 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] md:grid-cols-3 md:divide-x md:divide-y-0">
+
+            {/* Metric 1 */}
+            <div className="flex items-start gap-4 p-6 sm:p-8">
+              <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5 text-slate-400">
+                <Database className="h-4 w-4" strokeWidth={2} />
+              </div>
+              <div>
+                <p className="font-mono text-xs font-medium uppercase tracking-wider text-slate-500">
+                  Database Coverage
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-300">
+                  120M+ patent documents across global jurisdictions
+                </p>
+              </div>
             </div>
+
+            {/* Metric 2 */}
+            <div className="flex items-start gap-4 p-6 sm:p-8">
+              <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5 text-slate-400">
+                <FileSearch className="h-4 w-4" strokeWidth={2} />
+              </div>
+              <div>
+                <p className="font-mono text-xs font-medium uppercase tracking-wider text-slate-500">
+                  Search Sources
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-300">
+                  Combined intelligence from free and paid patent database sources
+                </p>
+              </div>
+            </div>
+
+            {/* Metric 3 */}
+            <div className="flex items-start gap-4 p-6 sm:p-8">
+              <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5 text-slate-400">
+                <LayoutTemplate className="h-4 w-4" strokeWidth={2} />
+              </div>
+              <div>
+                <p className="font-mono text-xs font-medium uppercase tracking-wider text-slate-500">
+                  Delivery Format
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-300">
+                  Structured report with key references and exact relevance notes
+                </p>
+              </div>
+            </div>
+
           </div>
         </Reveal>
+
       </div>
     </section>
   );
