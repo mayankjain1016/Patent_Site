@@ -25,7 +25,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4 leading-[1.15]"
+              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4 leading-[1.15]"
             >
               Expert Prior Art Search for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Technology-Driven</span> Inventions.
             </motion.h1>
@@ -45,18 +45,18 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-wrap items-center gap-4"
+              className="flex flex-col sm:flex-row w-full sm:w-auto items-stretch sm:items-center gap-4"
             >
               <Link
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-slate-900 text-white font-semibold transition-all duration-300 hover:bg-slate-800 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/20 focus:ring-2 focus:ring-offset-2 focus:ring-slate-900 shadow-md"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-slate-900 text-white font-semibold transition-all duration-300 hover:bg-slate-800 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/20 focus:ring-2 focus:ring-offset-2 focus:ring-slate-900 shadow-md"
               >
                 Request a Search
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="#services"
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg border border-slate-200 bg-white text-slate-700 font-semibold transition-all duration-300 hover:bg-slate-50 hover:-translate-y-1 hover:shadow-lg hover:border-slate-300 focus:ring-2 focus:ring-offset-2 focus:ring-slate-200 shadow-sm"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-lg border border-slate-200 bg-white text-slate-700 font-semibold transition-all duration-300 hover:bg-slate-50 hover:-translate-y-1 hover:shadow-lg hover:border-slate-300 focus:ring-2 focus:ring-offset-2 focus:ring-slate-200 shadow-sm"
               >
                 Explore Services
               </Link>
@@ -85,7 +85,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative mt-12 lg:mt-0 lg:ml-auto w-full max-w-lg xl:max-w-xl"
+            className="relative mt-12 lg:mt-0 mx-auto lg:ml-auto lg:mr-0 w-full max-w-lg xl:max-w-xl"
           >
             {/* Soft background shape behind image */}
             <div className="absolute -inset-4 bg-gradient-to-tr from-slate-100 to-blue-50/50 rounded-[2rem] transform -rotate-2 scale-105 -z-10" />

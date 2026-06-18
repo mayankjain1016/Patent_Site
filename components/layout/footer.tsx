@@ -46,7 +46,7 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-slate-400 hover:text-white transition-colors duration-150"
+                    className="block py-2 text-sm text-slate-400 hover:text-white transition-colors duration-150"
                   >
                     {link.label}
                   </a>
@@ -64,7 +64,7 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${CONTACT.email}`}
-                  className="flex items-start gap-3 text-sm text-slate-400 hover:text-white transition-colors"
+                  className="flex items-start gap-3 py-2 text-sm text-slate-400 hover:text-white transition-colors"
                 >
                   <Mail size={14} className="mt-0.5 shrink-0 text-navy-300" />
                   <span className="break-all">{CONTACT.email}</span>
@@ -73,7 +73,7 @@ export function Footer() {
               <li>
                 <a
                   href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
-                  className="flex items-center gap-3 text-sm text-slate-400 hover:text-white transition-colors"
+                  className="flex items-center gap-3 py-2 text-sm text-slate-400 hover:text-white transition-colors"
                 >
                   <Phone size={14} className="shrink-0 text-navy-300" />
                   {CONTACT.phone}

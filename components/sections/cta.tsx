@@ -13,11 +13,11 @@ export function CtaBanner() {
 
             {/* Engineered Background Substrate (Spotlight Effect) */}
             <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-              <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 h-[20rem] w-[40rem] rounded-full bg-blue-500/20 blur-[100px]" />
+              <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 h-[20rem] w-[200%] sm:w-[40rem] rounded-full bg-blue-500/20 blur-[100px]" />
             </div>
 
             {/* Main CTA Content */}
-            <div className="relative z-10 flex flex-col gap-10 px-6 py-16 sm:p-16 lg:flex-row lg:items-center lg:justify-between lg:px-20 lg:py-20">
+            <div className="relative z-10 flex flex-col gap-10 px-6 py-12 sm:p-16 lg:flex-row lg:items-center lg:justify-between lg:px-20 lg:py-20">
 
               {/* Left: Copy */}
               <div className="max-w-xl">
@@ -30,7 +30,7 @@ export function CtaBanner() {
               </div>
 
               {/* Right: Actions */}
-              <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
+              <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0 w-full lg:w-auto">
                 <Link
                   href="#contact"
                   className="group inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-white px-8 text-sm font-medium text-slate-950 transition-all duration-300 hover:bg-slate-100 hover:-translate-y-1 hover:shadow-lg hover:shadow-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-slate-950"

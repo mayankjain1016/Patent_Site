@@ -56,10 +56,10 @@ export function Contact() {
     'w-full bg-white border border-slate-200 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-navy-700 focus:ring-1 focus:ring-navy-700 transition-colors duration-150';
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-white">
+    <section id="contact" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-16 lg:gap-24 items-start">
+        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-24 items-start">
 
           {/* Left: Contact info */}
           <Reveal>
@@ -154,7 +154,7 @@ export function Contact() {
               <SuccessState onReset={() => setSubmitted(false)} />
             ) : (
               <form onSubmit={handleSubmit} noValidate>
-                <div className="bg-slate-50 border border-slate-200 p-8 lg:p-10">
+                <div className="bg-slate-50 border border-slate-200 p-6 sm:p-8 lg:p-10">
                   <h3 className="font-display font-semibold text-navy-900 text-lg mb-6">
                     Inquiry Form
                   </h3>

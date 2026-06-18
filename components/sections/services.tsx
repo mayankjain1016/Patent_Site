@@ -5,7 +5,7 @@ import { SERVICES } from '@/constants/site';
 
 export function Services() {
   return (
-    <section id="services" className="relative py-24 sm:py-32 bg-white overflow-hidden border-b border-slate-100">
+    <section id="services" className="relative py-16 sm:py-24 lg:py-32 bg-white overflow-hidden border-b border-slate-100">
       {/* Decorative background element */}
       <div className="absolute top-0 inset-x-0 h-[40rem] bg-gradient-to-b from-slate-50 via-transparent to-transparent pointer-events-none" />
       <div className="absolute top-40 right-0 -mr-20 w-[600px] h-[600px] bg-blue-50/40 blur-[120px] rounded-full pointer-events-none" />
@@ -35,7 +35,7 @@ export function Services() {
             return (
               <StaggerItem key={service.id}>
                 <article
-                  className="relative flex h-full flex-col bg-white rounded-2xl border border-slate-200 p-6 shadow-sm sm:p-8 transition-colors duration-300 hover:border-sky-400"
+                  className="relative flex h-full flex-col bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 lg:p-8 shadow-sm transition-colors duration-300 hover:border-sky-400"
                   aria-labelledby={`service-${service.id}`}
                 >
                   {/* Header Row: Icon & Number */}

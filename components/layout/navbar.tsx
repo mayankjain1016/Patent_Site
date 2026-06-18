@@ -167,7 +167,7 @@ export function Navbar() {
         {/* Sliding Panel */}
         <div
           className={cn(
-            'absolute inset-x-0 top-16 border-b border-slate-200 bg-white px-6 pb-8 pt-4 shadow-xl transition-transform duration-300 ease-out',
+            'absolute inset-x-0 top-16 border-b border-slate-200 bg-white px-6 pb-8 pt-4 shadow-xl transition-transform duration-300 ease-out overflow-y-auto max-h-[calc(100vh-4rem)]',
             mobileOpen ? 'translate-y-0' : '-translate-y-full'
           )}
         >
@@ -185,16 +185,7 @@ export function Navbar() {
             ))}
           </ul>
 
-          <div className="mt-6">
-            <Link
-              href="#contact"
-              onClick={(e) => handleNavClick(e, '#contact')}
-              className="group flex w-full items-center justify-center gap-2 rounded-lg bg-slate-950 px-4 py-3.5 text-sm font-medium text-white transition-all duration-300 hover:bg-slate-800 hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.98]"
-            >
-              Request a Search
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
-            </Link>
-          </div>
+
         </div>
       </div>
     </>

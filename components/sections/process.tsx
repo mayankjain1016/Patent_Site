@@ -5,7 +5,7 @@ import { PROCESS_STEPS } from '@/constants/site';
 
 export function Process() {
   return (
-    <section id="process" className="bg-slate-50/50 py-24 sm:py-32 border-y border-slate-100">
+    <section id="process" className="bg-slate-50/50 py-16 sm:py-24 lg:py-32 border-y border-slate-100">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
         {/* Engineered Header Layout */}
@@ -37,7 +37,7 @@ export function Process() {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
             {PROCESS_STEPS.map((step) => (
               <StaggerItem key={step.step}>
-                <div className="flex h-full flex-col bg-white rounded-2xl border border-slate-200 p-6 shadow-sm sm:p-8 transition-colors duration-300 hover:border-sky-400">
+                <div className="flex h-full flex-col bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 lg:p-8 shadow-sm transition-colors duration-300 hover:border-sky-400">
                   
                   {/* Node Header */}
                   <div className="mb-6 flex items-center justify-between">

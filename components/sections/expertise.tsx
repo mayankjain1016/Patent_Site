@@ -14,7 +14,7 @@ const DOMAIN_ICONS = [
 
 export function Expertise() {
   return (
-    <section id="expertise" className="relative bg-slate-50/50 py-24 sm:py-32 overflow-hidden">
+    <section id="expertise" className="relative bg-slate-50/50 py-16 sm:py-24 lg:py-32 overflow-hidden">
       {/* Decorative background element */}
       <div className="absolute top-0 right-0 -mr-20 w-[600px] h-[600px] bg-indigo-50/40 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 -ml-20 w-[600px] h-[600px] bg-blue-50/40 blur-[120px] rounded-full pointer-events-none" />
@@ -51,7 +51,7 @@ export function Expertise() {
             const IconComponent = DOMAIN_ICONS[idx % DOMAIN_ICONS.length];
             return (
               <StaggerItem key={domain.domain}>
-                <div className="flex h-full flex-col rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm transition-colors duration-300 hover:border-sky-400">
+                <div className="flex h-full flex-col rounded-2xl border border-slate-200/80 bg-white p-5 sm:p-6 shadow-sm transition-colors duration-300 hover:border-sky-400">
                   
                   {/* Domain Header */}
                   <div className="mb-6 flex items-start justify-between">
@@ -87,7 +87,7 @@ export function Expertise() {
 
         {/* Light Theme Callout Banner */}
         <Reveal delay={0.15}>
-          <div className="mt-16 flex flex-col gap-8 rounded-[2rem] bg-gradient-to-br from-blue-50 to-indigo-50/50 p-8 md:p-10 md:flex-row md:items-center md:justify-between shadow-sm border border-blue-100/50">
+          <div className="mt-16 flex flex-col gap-8 rounded-[2rem] bg-gradient-to-br from-blue-50 to-indigo-50/50 p-6 sm:p-8 md:p-10 md:flex-row md:items-center md:justify-between shadow-sm border border-blue-100/50">
 
             {/* Left: Cross-domain explanation */}
             <div className="flex max-w-2xl items-start gap-5">

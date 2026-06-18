@@ -19,9 +19,9 @@ const credentials = [
 
 export function About() {
   return (
-    <section id="about" className="relative bg-white py-24 sm:py-32">
+    <section id="about" className="relative bg-white py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-8">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
 
           {/* Left Column: Narrative & Mission */}
           <div className="lg:col-span-5 flex flex-col">
