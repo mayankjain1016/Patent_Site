@@ -119,8 +119,8 @@ export function Navbar() {
               href="#contact"
               onClick={(e) => handleNavClick(e, '#contact')}
               className={cn(
-                'group inline-flex h-9 items-center justify-center gap-2 rounded-md px-5 text-sm font-medium transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
-                'bg-slate-950 text-white hover:bg-slate-800 focus-visible:ring-slate-900'
+                'group inline-flex h-9 items-center justify-center gap-2 rounded-md px-5 text-sm font-medium transition-all duration-300 outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+                'bg-slate-950 text-white hover:bg-slate-800 hover:-translate-y-0.5 hover:shadow-lg focus-visible:ring-slate-900'
               )}
             >
               Request a Search
@@ -189,7 +189,7 @@ export function Navbar() {
             <Link
               href="#contact"
               onClick={(e) => handleNavClick(e, '#contact')}
-              className="group flex w-full items-center justify-center gap-2 rounded-lg bg-slate-950 px-4 py-3.5 text-sm font-medium text-white transition-all hover:bg-slate-800 active:scale-[0.98]"
+              className="group flex w-full items-center justify-center gap-2 rounded-lg bg-slate-950 px-4 py-3.5 text-sm font-medium text-white transition-all duration-300 hover:bg-slate-800 hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.98]"
             >
               Request a Search
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />

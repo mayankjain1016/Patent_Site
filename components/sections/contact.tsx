@@ -14,8 +14,7 @@ const serviceOptions = [
   'Patent Landscape Study',
   'Technical Reference Analysis',
   'Other / Not Sure',
-];
-
+]; 
 interface FormData {
   name: string;
   email: string;
@@ -246,7 +245,7 @@ export function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center gap-2 py-4 bg-navy-900 text-white text-sm font-semibold hover:bg-navy-800 active:bg-navy-950 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2"
+                    className="w-full inline-flex items-center justify-center gap-2 py-4 bg-navy-900 text-white text-sm font-semibold transition-all duration-300 hover:bg-navy-800 hover:-translate-y-1 hover:shadow-lg active:bg-navy-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2"
                   >
                     <Send size={15} strokeWidth={2} />
                     Send Inquiry

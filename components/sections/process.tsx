@@ -1,20 +1,19 @@
 import { Database, LayoutTemplate, FileSearch } from 'lucide-react';
 import { SectionOverline } from '@/components/ui/badge';
 import { Reveal, StaggerContainer, StaggerItem } from '@/components/ui/reveal';
-import { PROCESS_STEPS } from '@/constants/site'; // { step: string/number, title: string, description: string }
+import { PROCESS_STEPS } from '@/constants/site'; 
 
 export function Process() {
   return (
-    <section id="process" className="bg-slate-950 py-24 sm:py-32">
+    <section id="process" className="bg-slate-50/50 py-24 sm:py-32 border-y border-slate-100">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
         {/* Engineered Header Layout */}
         <div className="mb-16 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-16">
           <div className="lg:w-1/2">
             <Reveal>
-              {/* Assuming `light` prop makes your badge suitable for dark backgrounds */}
-              <SectionOverline light>Our Search Process</SectionOverline>
-              <h2 className="mt-6 font-sans text-3xl font-semibold tracking-tight text-white sm:text-4xl text-balance">
+              <SectionOverline>Our Search Process</SectionOverline>
+              <h2 className="mt-6 font-sans text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl text-balance">
                 A Systematic Research Methodology Built for Accuracy
               </h2>
             </Reveal>
@@ -22,7 +21,7 @@ export function Process() {
 
           <div className="lg:w-1/2">
             <Reveal delay={0.1}>
-              <p className="text-base leading-relaxed text-slate-400 text-pretty">
+              <p className="text-base leading-relaxed text-slate-600 text-pretty">
                 Patent searches are conducted using both free and paid patent database
                 sources covering global patent records across more than 120 million
                 published documents. Every search follows a structured, repeatable
@@ -33,27 +32,28 @@ export function Process() {
           </div>
         </div>
 
-        {/* Execution Pipeline (Grid) */}
-        <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl">
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-px">
-            {PROCESS_STEPS.map((step, idx) => (
+        {/* Execution Pipeline (Airy Light Grid) */}
+        <div className="mt-16">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+            {PROCESS_STEPS.map((step) => (
               <StaggerItem key={step.step}>
-                <div className="group relative flex h-full flex-col bg-slate-950 p-8 transition-colors duration-300 hover:bg-white/[0.02] sm:p-10">
-
-                  {/* Node Header (Connects visually across the grid) */}
-                  <div className="mb-8 flex items-center gap-4">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-blue-500/30 bg-blue-500/10 font-mono text-xs font-semibold text-blue-400 transition-colors duration-300 group-hover:border-blue-500/50 group-hover:bg-blue-500/20 group-hover:text-blue-300">
+                <div className="flex h-full flex-col bg-white rounded-2xl border border-slate-200 p-6 shadow-sm sm:p-8 transition-colors duration-300 hover:border-sky-400">
+                  
+                  {/* Node Header */}
+                  <div className="mb-6 flex items-center justify-between">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-50 font-mono text-sm font-bold text-blue-600 ring-4 ring-white shadow-sm">
                       {step.step}
                     </div>
-                    {/* Visual connecting line (only rightward) */}
-                    <div className="h-px flex-1 bg-white/5 transition-colors duration-300 group-hover:bg-white/10" aria-hidden="true" />
+                    {/* Visual connecting line indicator */}
+                    <div className="h-px flex-1 mx-4 bg-slate-100" aria-hidden="true" />
+                    <div className="h-2 w-2 rounded-full bg-slate-200" aria-hidden="true" />
                   </div>
 
                   {/* Content */}
-                  <h3 className="mb-3 font-sans text-lg font-semibold text-slate-200">
+                  <h3 className="mb-3 font-sans text-lg font-semibold text-slate-900">
                     {step.title}
                   </h3>
-                  <p className="flex-1 text-sm leading-relaxed text-slate-400">
+                  <p className="flex-1 text-sm leading-relaxed text-slate-600">
                     {step.description}
                   </p>
 
@@ -65,48 +65,48 @@ export function Process() {
 
         {/* Telemetry Footer (Methodology Note) */}
         <Reveal delay={0.15}>
-          <div className="mt-12 grid grid-cols-1 divide-y divide-white/5 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] md:grid-cols-3 md:divide-x md:divide-y-0">
+          <div className="mt-16 grid grid-cols-1 divide-y divide-slate-100 overflow-hidden rounded-2xl border border-slate-200 bg-white md:grid-cols-3 md:divide-x md:divide-y-0 shadow-sm">
 
             {/* Metric 1 */}
-            <div className="flex items-start gap-4 p-6 sm:p-8">
-              <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5 text-slate-400">
-                <Database className="h-4 w-4" strokeWidth={2} />
+            <div className="flex items-start gap-4 p-6 sm:p-8 hover:bg-slate-50 transition-colors">
+              <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                <Database className="h-5 w-5" strokeWidth={2} />
               </div>
               <div>
-                <p className="font-mono text-xs font-medium uppercase tracking-wider text-slate-500">
+                <p className="font-mono text-xs font-semibold uppercase tracking-wider text-slate-500">
                   Database Coverage
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-300">
+                <p className="mt-2 text-sm font-medium leading-relaxed text-slate-700">
                   120M+ patent documents across global jurisdictions
                 </p>
               </div>
             </div>
 
             {/* Metric 2 */}
-            <div className="flex items-start gap-4 p-6 sm:p-8">
-              <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5 text-slate-400">
-                <FileSearch className="h-4 w-4" strokeWidth={2} />
+            <div className="flex items-start gap-4 p-6 sm:p-8 hover:bg-slate-50 transition-colors">
+              <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600">
+                <FileSearch className="h-5 w-5" strokeWidth={2} />
               </div>
               <div>
-                <p className="font-mono text-xs font-medium uppercase tracking-wider text-slate-500">
+                <p className="font-mono text-xs font-semibold uppercase tracking-wider text-slate-500">
                   Search Sources
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-300">
+                <p className="mt-2 text-sm font-medium leading-relaxed text-slate-700">
                   Combined intelligence from free and paid patent database sources
                 </p>
               </div>
             </div>
 
             {/* Metric 3 */}
-            <div className="flex items-start gap-4 p-6 sm:p-8">
-              <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5 text-slate-400">
-                <LayoutTemplate className="h-4 w-4" strokeWidth={2} />
+            <div className="flex items-start gap-4 p-6 sm:p-8 hover:bg-slate-50 transition-colors">
+              <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-purple-50 text-purple-600">
+                <LayoutTemplate className="h-5 w-5" strokeWidth={2} />
               </div>
               <div>
-                <p className="font-mono text-xs font-medium uppercase tracking-wider text-slate-500">
+                <p className="font-mono text-xs font-semibold uppercase tracking-wider text-slate-500">
                   Delivery Format
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-300">
+                <p className="mt-2 text-sm font-medium leading-relaxed text-slate-700">
                   Structured report with key references and exact relevance notes
                 </p>
               </div>

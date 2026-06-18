@@ -33,14 +33,14 @@ export function CtaBanner() {
               <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
                 <Link
                   href="#contact"
-                  className="group inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-white px-8 text-sm font-medium text-slate-950 transition-all hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-slate-950"
+                  className="group inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-white px-8 text-sm font-medium text-slate-950 transition-all duration-300 hover:bg-slate-100 hover:-translate-y-1 hover:shadow-lg hover:shadow-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-slate-950"
                 >
                   Request a Search
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
                 <Link
                   href="#services"
-                  className="group inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-white/10 bg-transparent px-8 text-sm font-medium text-white transition-all hover:bg-white/5 hover:border-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-slate-950"
+                  className="group inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-white/10 bg-transparent px-8 text-sm font-medium text-white transition-all duration-300 hover:bg-white/5 hover:border-white/20 hover:-translate-y-1 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-slate-950"
                 >
                   View Services
                 </Link>

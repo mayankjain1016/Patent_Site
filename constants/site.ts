@@ -209,7 +209,6 @@ export const PROCESS_STEPS: ProcessStep[] = [
       'Provide optional remote or in-office support to help inventors understand the cited references',
   },
 ];
-
 export const CLIENT_TYPES: ClientType[] = [
   {
     title: 'Individual Inventors',
