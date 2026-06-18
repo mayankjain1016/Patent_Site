@@ -185,8 +185,16 @@ export function Navbar() {
             ))}
           </ul>
 
-
-        </div>
+          <div className="mt-6 pt-6 border-t border-slate-100">
+            <Link
+              href="#contact"
+              onClick={(e) => handleNavClick(e, '#contact')}
+              className="group flex w-full items-center justify-center gap-2 rounded-md bg-slate-950 py-3.5 text-sm font-medium text-white transition-all duration-300 hover:bg-slate-800 active:scale-[0.98] shadow-sm"
+            >
+              Request a Search
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </Link>
+          </div>        </div>
       </div>
     </>
   );
