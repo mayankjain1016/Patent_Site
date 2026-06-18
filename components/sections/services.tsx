@@ -5,7 +5,7 @@ import { SERVICES } from '@/constants/site';
 
 export function Services() {
   return (
-    <section id="services" className="relative py-16 sm:py-24 lg:py-32 bg-white overflow-hidden border-b border-slate-100">
+    <section id="services" className="relative pt-8 pb-16 sm:pt-12 sm:pb-24 lg:pt-16 lg:pb-32 bg-white overflow-hidden border-b border-slate-100">
       {/* Decorative background element */}
       <div className="absolute top-0 inset-x-0 h-[40rem] bg-gradient-to-b from-slate-50 via-transparent to-transparent pointer-events-none" />
       <div className="absolute top-40 right-0 -mr-20 w-[600px] h-[600px] bg-blue-50/40 blur-[120px] rounded-full pointer-events-none" />
@@ -14,9 +14,7 @@ export function Services() {
 
         {/* Section Header */}
         <Reveal className="mx-auto max-w-2xl text-center mb-16 lg:mb-20">
-          <div className="flex justify-center">
-            <SectionOverline>Our Services</SectionOverline>
-          </div>
+
           <h2 className="mt-6 font-sans text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl text-balance">
             Comprehensive Patent Research Services
           </h2>

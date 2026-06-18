@@ -91,7 +91,9 @@ export function Founder() {
           {/* Right Column: Narrative & Credentials */}
           <div className="lg:col-span-8 xl:col-span-8 flex flex-col">
             <Reveal>
-              <SectionOverline>The Expert Behind the Research</SectionOverline>
+              <h3 className="font-sans text-sm font-bold tracking-widest text-blue-600 uppercase mb-4">
+                The Expert Behind the Research
+              </h3>
               <h2 className="mt-6 font-sans text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl text-balance">
                 Technical Authority in Patent Search & Prior Art Analysis
               </h2>

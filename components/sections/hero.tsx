@@ -10,7 +10,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex items-center justify-center pt-12 pb-8 lg:pt-16 lg:pb-8 overflow-hidden bg-slate-50"
+      className="relative flex items-center justify-center pt-20 pb-8 lg:pt-24 lg:pb-8 overflow-hidden bg-slate-50"
     >
 
 
@@ -25,7 +25,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4 leading-[1.15]"
+              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-4 leading-[1.15]"
             >
               Expert Prior Art Search for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Technology-Driven</span> Inventions.
             </motion.h1>

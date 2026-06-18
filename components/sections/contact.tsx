@@ -59,11 +59,10 @@ export function Contact() {
     <section id="contact" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-24 items-start">
+        <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-24 items-start">
 
           {/* Left: Contact info */}
-          <Reveal>
-            <SectionOverline>Get in Touch</SectionOverline>
+          <Reveal className="order-2 lg:order-2">
             <h2 className="font-display font-bold text-navy-900 text-3xl md:text-4xl tracking-tight leading-[1.15] mb-6">
               Share Your Invention. Receive Expert Research.
             </h2>
@@ -149,7 +148,7 @@ export function Contact() {
           </Reveal>
 
           {/* Right: Form */}
-          <Reveal delay={0.1}>
+          <Reveal delay={0.1} className="order-1 lg:order-1">
             {submitted ? (
               <SuccessState onReset={() => setSubmitted(false)} />
             ) : (

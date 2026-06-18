@@ -25,7 +25,9 @@ export function Expertise() {
         <div className="mb-16 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-16">
           <div className="lg:w-1/2">
             <Reveal>
-              <SectionOverline>Technical Expertise</SectionOverline>
+              <h3 className="font-sans text-sm font-bold tracking-widest text-blue-600 uppercase mb-4">
+                Technical Expertise
+              </h3>
               <h2 className="mt-6 font-sans text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl text-balance">
                 Deep Domain Coverage Across Technology Fields
               </h2>

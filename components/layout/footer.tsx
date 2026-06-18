@@ -27,7 +27,7 @@ export function Footer() {
                 {SITE_NAME}
               </span>
             </div>
-            <p className="font-mono text-[10px] tracking-[0.14em] uppercase text-navy-300 mb-4">
+            <p className="font-sans text-sm font-medium text-white mb-4">
               {SITE_TAGLINE}
             </p>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
@@ -38,7 +38,7 @@ export function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="text-xs font-mono font-medium tracking-[0.14em] uppercase text-navy-300 mb-5">
+            <h3 className="font-sans text-sm font-semibold text-white mb-5">
               Navigation
             </h3>
             <ul className="flex flex-col gap-3">
@@ -57,7 +57,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-xs font-mono font-medium tracking-[0.14em] uppercase text-navy-300 mb-5">
+            <h3 className="font-sans text-sm font-semibold text-white mb-5">
               Contact
             </h3>
             <ul className="flex flex-col gap-4">
@@ -99,8 +99,8 @@ export function Footer() {
           <p className="text-xs text-slate-500">
             © {currentYear} {SITE_NAME}. All rights reserved.
           </p>
-          <p className="text-xs text-slate-600 font-mono tracking-wider">
-            MSME · IPR CONSULTANCY · AGRA, INDIA
+          <p className="text-xs text-slate-500">
+            Developed By <span className="font-semibold text-white">AFFOBE</span>
           </p>
         </div>
       </div>

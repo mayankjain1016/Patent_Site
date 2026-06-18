@@ -11,7 +11,7 @@ export function WhoWeHelp() {
         <div className="mb-16 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-16">
           <div className="lg:w-1/2">
             <Reveal>
-              <SectionOverline>Who We Help</SectionOverline>
+
               <h2 className="mt-6 font-sans text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl text-balance">
                 Supporting Inventors, Businesses & Legal Teams
               </h2>

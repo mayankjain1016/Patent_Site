@@ -1,4 +1,4 @@
-import { CheckCircle2, ShieldCheck, Cpu, Award, MapPin } from 'lucide-react';
+import { CheckCircle2, ShieldCheck, Cpu, Award, MapPin, Quote } from 'lucide-react';
 import { SectionOverline } from '@/components/ui/badge';
 import { Reveal } from '@/components/ui/reveal';
 
@@ -19,14 +19,14 @@ const credentials = [
 
 export function About() {
   return (
-    <section id="about" className="relative bg-white py-16 sm:py-24 lg:py-32">
+    <section id="about" className="relative bg-white pt-16 pb-8 sm:pt-24 sm:pb-12 lg:pt-32 lg:pb-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
 
           {/* Left Column: Narrative & Mission */}
           <div className="lg:col-span-5 flex flex-col">
             <Reveal>
-              <SectionOverline>About Vicky Infotech</SectionOverline>
+
 
               <h2 className="mt-6 font-sans text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl text-balance">
                 An MSME-Based IPR Consultancy Built on Technical Depth
@@ -41,14 +41,16 @@ export function About() {
                   analysis, and technology-focused IP strategy.
                 </p>
 
-                {/* Elevated Mission Quote - Replaces the duplicate paragraph blockquote */}
-                <div className="relative mt-2 rounded-2xl border border-slate-100 bg-slate-50/50 p-6 shadow-sm">
-                  <div className="absolute -left-1.5 top-6 h-8 w-1 rounded-r-full bg-blue-600" aria-hidden="true" />
-                  <p className="font-mono text-sm leading-relaxed text-slate-700">
-                    "Our focus is to support innovators with technically sound, well-structured,
-                    and business-relevant patent research that helps them understand the strength,
-                    novelty, and competitive context of their inventions."
-                  </p>
+                {/* Mission Quote */}
+                <div className="relative mt-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <div className="flex gap-4 items-start">
+                    <Quote className="mt-0.5 h-6 w-6 shrink-0 text-blue-500" aria-hidden="true" strokeWidth={2} fill="currentColor" />
+                    <p className="font-sans text-base font-normal leading-relaxed text-slate-700">
+                      Our focus is to support innovators with technically sound, well-structured,
+                      and business-relevant patent research that helps them understand the strength,
+                      novelty, and competitive context of their inventions.
+                    </p>
+                  </div>
                 </div>
               </div>
             </Reveal>
@@ -66,14 +68,14 @@ export function About() {
                 {credentials.map((cred, idx) => (
                   <div
                     key={idx}
-                    className="flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-4 transition-shadow hover:shadow-md"
+                    className="group flex items-center gap-4 rounded-2xl border border-slate-200 bg-gradient-to-b from-white to-slate-50/50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-900/5"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-50 border border-slate-100">
-                      <cred.icon className="h-5 w-5 text-blue-600" />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50/80 text-blue-600 border border-blue-100/50 transition-transform duration-300 group-hover:scale-110 group-hover:bg-blue-100/80 group-hover:text-blue-700">
+                      <cred.icon className="h-6 w-6" strokeWidth={1.5} />
                     </div>
                     <div>
-                      <p className="font-sans text-sm font-semibold text-slate-900">{cred.label}</p>
-                      <p className="mt-1 font-mono text-xs uppercase tracking-wider text-slate-500">
+                      <p className="font-sans text-sm font-bold text-slate-900 group-hover:text-blue-950 transition-colors">{cred.label}</p>
+                      <p className="mt-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-slate-500">
                         {cred.sublabel}
                       </p>
                     </div>

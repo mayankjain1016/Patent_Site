@@ -67,10 +67,10 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          'fixed inset-x-0 top-0 z-50 transition-all duration-300',
+          'fixed inset-x-0 top-0 z-50 transition-all duration-300 bg-white',
           scrolled
-            ? 'bg-white border-b border-slate-200 shadow-[0_1px_3px_0_rgba(0,0,0,0.02)]'
-            : 'bg-transparent border-b border-transparent'
+            ? 'border-b border-slate-200 shadow-[0_1px_3px_0_rgba(0,0,0,0.02)]'
+            : 'border-b border-transparent'
         )}
       >
         <nav
