@@ -63,10 +63,10 @@ export function Contact() {
 
           {/* Left: Contact info */}
           <Reveal className="order-2 lg:order-2">
-            <h2 className="font-display font-bold text-navy-900 text-3xl md:text-4xl tracking-tight leading-[1.15] mb-6">
+            <h2 className="text-balance font-display font-bold text-navy-900 text-3xl md:text-4xl tracking-tight leading-[1.15] mb-6">
               Share Your Invention. Receive Expert Research.
             </h2>
-            <p className="text-slate-500 leading-[1.85] mb-10">
+            <p className="text-justify text-pretty text-slate-500 leading-[1.85] mb-10">
               Share your invention disclosure, technical concept, or search requirement. 
               Vicky Infotech will help you understand the closest available references 
               and take the next step with greater confidence.
@@ -161,7 +161,7 @@ export function Contact() {
                   <div className="grid sm:grid-cols-2 gap-5 mb-5">
                     {/* Name */}
                     <div className="sm:col-span-2">
-                      <label className="block font-mono text-[9px] tracking-[0.18em] uppercase text-slate-500 mb-2">
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
                         Full Name <span className="text-accent-500">*</span>
                       </label>
                       <input
@@ -177,7 +177,7 @@ export function Contact() {
 
                     {/* Email */}
                     <div>
-                      <label className="block font-mono text-[9px] tracking-[0.18em] uppercase text-slate-500 mb-2">
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
                         Email <span className="text-accent-500">*</span>
                       </label>
                       <input
@@ -193,7 +193,7 @@ export function Contact() {
 
                     {/* Phone */}
                     <div>
-                      <label className="block font-mono text-[9px] tracking-[0.18em] uppercase text-slate-500 mb-2">
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
                         Phone
                       </label>
                       <input
@@ -208,7 +208,7 @@ export function Contact() {
 
                     {/* Service type */}
                     <div className="sm:col-span-2">
-                      <label className="block font-mono text-[9px] tracking-[0.18em] uppercase text-slate-500 mb-2">
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
                         Search Type <span className="text-accent-500">*</span>
                       </label>
                       <select
@@ -228,7 +228,7 @@ export function Contact() {
 
                     {/* Message */}
                     <div className="sm:col-span-2">
-                      <label className="block font-mono text-[9px] tracking-[0.18em] uppercase text-slate-500 mb-2">
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
                         Invention Summary / Query <span className="text-accent-500">*</span>
                       </label>
                       <textarea
@@ -272,7 +272,7 @@ function SuccessState({ onReset }: { onReset: () => void }) {
       <h3 className="font-display font-semibold text-navy-900 text-xl mb-3">
         Inquiry Prepared
       </h3>
-      <p className="text-slate-500 text-sm leading-relaxed mb-6 max-w-xs">
+      <p className="text-pretty text-slate-500 text-sm leading-relaxed mb-6 max-w-xs">
         Your email client should have opened with the inquiry pre-filled. 
         If not, please email directly at{' '}
         <a

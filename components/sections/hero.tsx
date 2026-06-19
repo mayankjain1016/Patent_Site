@@ -25,7 +25,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-4 leading-[1.15]"
+              className="text-balance text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-4 leading-[1.15]"
             >
               Expert Prior Art Search for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Technology-Driven</span> Inventions.
             </motion.h1>
@@ -35,7 +35,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-base sm:text-lg text-slate-600 mb-6 leading-relaxed max-w-xl"
+              className="text-justify text-pretty text-base sm:text-lg text-slate-600 mb-6 leading-relaxed max-w-xl"
             >
               Make informed patent decisions with reliable research, technical analysis, and support across computer science, electronics, and AI architectures.
             </motion.p>
@@ -106,14 +106,14 @@ export function Hero() {
             <motion.div 
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-4 z-20"
+              className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white/90 backdrop-blur-sm p-2.5 sm:p-4 rounded-lg sm:rounded-xl shadow-xl border border-slate-100 flex items-center gap-2 sm:gap-4 z-20"
             >
-               <div className="w-12 h-12 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold text-lg shadow-inner">
+               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold text-base sm:text-lg shadow-inner">
                  2008
                </div>
                <div>
-                 <p className="text-sm font-bold text-slate-900">Established</p>
-                 <p className="text-xs font-medium text-slate-500">Decades of Trust</p>
+                 <p className="text-xs sm:text-sm font-bold text-slate-900">Established</p>
+                 <p className="text-[10px] sm:text-xs font-medium text-slate-500">Decades of Trust</p>
                </div>
             </motion.div>
           </motion.div>

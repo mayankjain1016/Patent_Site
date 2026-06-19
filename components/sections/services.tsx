@@ -18,7 +18,7 @@ export function Services() {
           <h2 className="mt-6 font-sans text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl text-balance">
             Comprehensive Patent Research Services
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-slate-600 text-pretty">
+          <p className="mt-6 text-justify text-pretty text-lg leading-relaxed text-slate-600">
             From initial prior art searches to full patent landscape studies,
             every service is designed to give inventors and businesses the
             intelligence they need to make stronger patent decisions.
@@ -58,7 +58,7 @@ export function Services() {
                     {service.title}
                   </h3>
 
-                  <p className="flex-1 text-sm leading-relaxed text-slate-600">
+                  <p className="text-justify text-pretty flex-1 text-sm leading-relaxed text-slate-600">
                     {service.description}
                   </p>
                 </article>
@@ -70,10 +70,10 @@ export function Services() {
         {/* Structured Bottom Note - Converted to Value Pillars */}
         <Reveal delay={0.2} className="mt-16 sm:mt-20">
           <div className="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-8 bg-slate-50 py-6 px-8 rounded-2xl border border-slate-100 max-w-4xl mx-auto shadow-sm">
-            <span className="font-mono text-xs font-bold uppercase tracking-widest text-slate-400 sm:pr-8 sm:border-r sm:border-slate-200">
+            <span className="text-base font-bold text-slate-900 w-full text-center pb-4 border-b border-slate-200 sm:text-sm sm:font-semibold sm:text-slate-700 sm:w-auto sm:pb-0 sm:border-b-0 sm:pr-8 sm:border-r">
               Report Deliverables
             </span>
-            <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+            <ul className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center justify-center gap-x-8 gap-y-3 sm:gap-y-4 w-fit mx-auto sm:w-auto sm:mx-0">
               {['Novelty Analysis', 'Inventive Step', 'Industrial Applicability'].map((item) => (
                 <li key={item} className="flex items-center gap-2.5">
                   <CheckCircle2 className="h-5 w-5 text-blue-500" strokeWidth={2.5} aria-hidden="true" />

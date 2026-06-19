@@ -32,7 +32,7 @@ export function Footer() {
             </p>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
               Expert prior art search and patent research services led by Vipin Kumar, 
-              Registered Patent Agent with 18+ years of deep technical IP experience.
+              with 18+ years of deep technical IP experience.
             </p>
           </div>
 
@@ -100,7 +100,15 @@ export function Footer() {
             © {currentYear} {SITE_NAME}. All rights reserved.
           </p>
           <p className="text-xs text-slate-500">
-            Developed By <span className="font-semibold text-white">AFFOBE</span>
+            Developed By{' '}
+            <a 
+              href="https://affobe.com/about" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="font-semibold text-white hover:text-blue-400 transition-colors duration-200"
+            >
+              AFFOBE
+            </a>
           </p>
         </div>
       </div>

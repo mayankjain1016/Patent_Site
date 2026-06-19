@@ -20,7 +20,7 @@ export function WhoWeHelp() {
 
           <div className="lg:w-1/2">
             <Reveal delay={0.1}>
-              <p className="text-base leading-relaxed text-slate-600 text-pretty">
+              <p className="text-justify text-pretty text-base leading-relaxed text-slate-600">
                 Patent intelligence is not just for large corporations.
                 Vicky Infotech works with individual inventors, startups,
                 R&amp;D teams, law firms, and technology businesses at
@@ -50,7 +50,7 @@ export function WhoWeHelp() {
                   <h3 className="mb-3 font-sans text-base font-semibold text-slate-900">
                     {title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-slate-600">
+                  <p className="text-justify text-pretty text-sm leading-relaxed text-slate-600">
                     {description}
                   </p>
                 </div>

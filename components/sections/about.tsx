@@ -3,7 +3,7 @@ import { SectionOverline } from '@/components/ui/badge';
 import { Reveal } from '@/components/ui/reveal';
 
 const differentiators = [
-  'Led by a Computer Science Engineer and Registered Patent Agent with deep technical and IP experience',
+  'Led by a Computer Science Engineer with deep technical and IP experience',
   'Strong understanding of software, electronics, communication, AI, IoT, and cross-domain inventions',
   'Experience supporting inventors, MSMEs, law firms, research organizations, and technology businesses',
   'Clear reporting style focused on relevance, technical comparison, and decision-making value',
@@ -12,7 +12,7 @@ const differentiators = [
 
 const credentials = [
   { icon: Cpu, label: 'B.E. Computer Science', sublabel: 'Since 2002' },
-  { icon: ShieldCheck, label: 'Registered Patent Agent', sublabel: 'Since 2008' },
+  { icon: ShieldCheck, label: 'Patent Professional', sublabel: 'Since 2008' },
   { icon: Award, label: 'Embedded Systems', sublabel: 'Certified Course' },
   { icon: MapPin, label: 'MSME-Registered', sublabel: 'Agra, UP' },
 ];
@@ -33,10 +33,10 @@ export function About() {
               </h2>
 
               <div className="mt-6 flex flex-col gap-6">
-                <p className="text-base leading-relaxed text-slate-600">
+                <p className="text-justify text-pretty text-base leading-relaxed text-slate-600">
                   Vicky Infotech is an MSME-based IPR consultancy located in Sikandra, Agra.
                   The firm is founded and managed by Vipin Kumar, a Computer Science Engineer
-                  and Registered Patent Agent with extensive experience in patent search,
+                  with extensive experience in patent search,
                   patent drafting, prosecution support, patent landscaping, invalidation
                   analysis, and technology-focused IP strategy.
                 </p>
@@ -45,7 +45,7 @@ export function About() {
                 <div className="relative mt-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                   <div className="flex gap-4 items-start">
                     <Quote className="mt-0.5 h-6 w-6 shrink-0 text-blue-500" aria-hidden="true" strokeWidth={2} fill="currentColor" />
-                    <p className="font-sans text-base font-normal leading-relaxed text-slate-700">
+                    <p className="text-justify text-pretty font-sans text-base font-normal leading-relaxed text-slate-700">
                       Our focus is to support innovators with technically sound, well-structured,
                       and business-relevant patent research that helps them understand the strength,
                       novelty, and competitive context of their inventions.
@@ -75,7 +75,7 @@ export function About() {
                     </div>
                     <div>
                       <p className="font-sans text-sm font-bold text-slate-900 group-hover:text-blue-950 transition-colors">{cred.label}</p>
-                      <p className="mt-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-slate-500">
+                      <p className="mt-1 text-sm font-medium text-slate-500">
                         {cred.sublabel}
                       </p>
                     </div>
@@ -98,7 +98,7 @@ export function About() {
                       strokeWidth={2}
                       aria-hidden="true"
                     />
-                    <span className="text-sm leading-relaxed text-slate-600">
+                    <span className="text-pretty text-sm leading-relaxed text-slate-600">
                       {point}
                     </span>
                   </li>

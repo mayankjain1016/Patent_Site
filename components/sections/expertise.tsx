@@ -36,7 +36,7 @@ export function Expertise() {
 
           <div className="lg:w-1/2">
             <Reveal delay={0.1}>
-              <p className="text-base leading-relaxed text-slate-600 text-pretty">
+              <p className="text-justify text-pretty text-base leading-relaxed text-slate-600">
                 Patent research requires understanding the invention at a technical level.
                 With a B.E. in Computer Science and hands-on knowledge of embedded systems,
                 our research covers the full breadth of modern technology fields — from
@@ -100,7 +100,7 @@ export function Expertise() {
                 <p className="text-lg font-bold text-slate-900">
                   Cross-Domain Capability
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                <p className="text-justify text-pretty mt-2 text-sm leading-relaxed text-slate-600">
                   Many inventions span multiple fields. Prior art searches extend into
                   electronics, signal systems, analog interfaces, physics, chemistry,
                   and thermal science where the invention concept crosses boundaries.
@@ -114,10 +114,10 @@ export function Expertise() {
                 <Search className="h-6 w-6" strokeWidth={1.5} aria-hidden="true" />
               </div>
               <div>
-                <p className="font-mono text-xs font-bold uppercase tracking-widest text-slate-500">
+                <p className="text-sm font-semibold text-slate-700">
                   Search Methodology
                 </p>
-                <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-2 font-mono text-xs font-semibold text-slate-700">
+                <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-2 text-sm font-medium text-slate-700">
                   <li className="bg-white px-2 py-1 rounded-md border border-slate-200/60 shadow-sm">IPC</li>
                   <li className="bg-white px-2 py-1 rounded-md border border-slate-200/60 shadow-sm">CPC</li>
                   <li className="bg-white px-2 py-1 rounded-md border border-slate-200/60 shadow-sm">Keyword</li>

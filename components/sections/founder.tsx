@@ -12,7 +12,7 @@ const credentials = [
   },
   {
     Icon: Shield,
-    title: 'Registered Patent Agent',
+    title: 'Patent Professional',
     subtitle: 'Since 2008 · India',
     detail: 'Authorised to conduct patent searches, drafting, and prosecution support',
   },
@@ -74,16 +74,7 @@ export function Founder() {
                   Founder, Vicky Infotech
                 </p>
 
-                {/* Premium Status Badge */}
-                <div className="mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 shadow-sm">
-                  <span className="relative flex h-2 w-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75" aria-hidden="true" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-500" aria-hidden="true" />
-                  </span>
-                  <span className="font-mono text-xs font-semibold uppercase tracking-wider text-slate-600">
-                    Registered Patent Agent
-                  </span>
-                </div>
+
               </div>
             </Reveal>
           </div>
@@ -99,9 +90,9 @@ export function Founder() {
               </h2>
 
               {/* Typeset Bio Narrative */}
-              <div className="mt-8 text-base leading-relaxed text-slate-600 text-pretty">
+              <div className="text-justify text-pretty mt-8 text-base leading-relaxed text-slate-600">
                 <p className="mb-4">
-                  Vipin Kumar holds a B.E. in Computer Science, completed in 2002, and has been a Registered Patent Agent since 2008. He has extensive experience in conducting patent searches and prior art searches. After completing his B.E. degree, he also completed a course in Embedded Systems.
+                  Vipin Kumar holds a B.E. in Computer Science, completed in 2002, and has been working in the patent field since 2008. He has extensive experience in conducting patent searches and prior art searches. After completing his B.E. degree, he also completed a course in Embedded Systems.
                 </p>
                 <p>
                   Vipin provides prior art search services across various computer science topics to support inventors in filing patent applications. His focus is exclusively on delivering patent search services with detailed analysis of novelty, inventive step/non-obviousness, and industrial applicability. These services help inventors understand, in advance, who their competitors are and what information related to their inventions is already available in the public domain, enabling them to rework or work around existing knowledge to improve their inventions.
@@ -127,14 +118,14 @@ export function Founder() {
                           <h3 className="font-sans text-sm font-semibold text-slate-900">
                             {title}
                           </h3>
-                          <p className="mt-0.5 font-mono text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                          <p className="mt-0.5 text-xs font-medium text-slate-500">
                             {subtitle}
                           </p>
                         </div>
                       </div>
 
                       {/* Credential Detail */}
-                      <p className="text-sm leading-relaxed text-slate-600">
+                      <p className="text-justify text-pretty text-sm leading-relaxed text-slate-600">
                         {detail}
                       </p>
                     </div>
