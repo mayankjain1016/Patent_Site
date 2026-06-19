@@ -34,50 +34,52 @@ export function Services() {
             return (
               <StaggerItem key={service.id}>
                 <article
-                  className="relative flex h-full flex-col bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 lg:p-8 shadow-sm transition-colors duration-300 hover:border-sky-400"
+                  className="group relative flex h-full flex-col bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 lg:p-8 shadow-sm transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] hover:border-sky-400 hover:shadow-md"
                   aria-labelledby={`service-${service.id}`}
                 >
-                  {/* Header Row: Icon & Number */}
-                  <div className="mb-4 flex items-center justify-between">
-                    {!service.image ? (
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-slate-600">
+                  {/* Dynamic Header Image/Icon Container */}
+                  <div className="mb-6 relative w-12 h-12 overflow-hidden rounded-xl transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:w-full group-hover:h-32 group-hover:rounded-2xl group-hover:bg-slate-50/80 group-hover:shadow-inner">
+                    {service.image ? (
+                      <>
+                        {/* Default State: Cover */}
+                        <Image
+                          src={service.image}
+                          alt={service.title}
+                          fill
+                          className="object-cover transition-opacity duration-500 group-hover:opacity-0"
+                        />
+                        {/* Hover State: Contain (No Cropping, Smooth Crossfade) */}
+                        <Image
+                          src={service.image}
+                          alt={service.title}
+                          fill
+                          className="object-contain p-2 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                        />
+                      </>
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center bg-slate-50 text-slate-600 transition-colors duration-500">
                         <Icon
-                          className="h-6 w-6"
+                          className="h-6 w-6 transition-all duration-500 group-hover:scale-150 group-hover:text-sky-600"
                           strokeWidth={1.5}
                           aria-hidden="true"
                         />
                       </div>
-                    ) : (
-                      <div /> /* Spacer to push number to right */
                     )}
-                    <span className="font-mono text-sm font-bold tracking-widest text-slate-300">
-                      {service.number}
-                    </span>
                   </div>
 
-                  {/* Card Image */}
-                  {service.image && (
-                    <div className="relative w-full h-40 sm:h-48 lg:h-52 mb-6">
-                      <Image
-                        src={service.image}
-                        alt={service.title}
-                        fill
-                        className="object-contain object-center"
-                      />
-                    </div>
-                  )}
-
                   {/* Content */}
-                  <h3
-                    id={`service-${service.id}`}
-                    className="mb-3 font-sans text-lg font-bold text-slate-900"
-                  >
-                    {service.title}
-                  </h3>
+                  <div className="flex-1 flex flex-col">
+                    <h3
+                      id={`service-${service.id}`}
+                      className="mb-3 font-sans text-lg font-bold text-slate-900 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:text-[1.15rem] group-hover:text-sky-950"
+                    >
+                      {service.title}
+                    </h3>
 
-                  <p className="text-justify text-pretty flex-1 text-sm leading-relaxed text-slate-600">
-                    {service.description}
-                  </p>
+                    <p className="text-justify text-pretty flex-1 text-sm leading-relaxed text-slate-600 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:text-[0.925rem] group-hover:leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
                 </article>
               </StaggerItem>
             );
