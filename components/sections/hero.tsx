@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { STATS } from '@/constants/site';
+import { Counter } from '@/components/ui/counter';
 
 export function Hero() {
   return (
@@ -73,7 +74,9 @@ export function Hero() {
                 {STATS.map((stat, index) => (
                   <div key={index} className="flex flex-col justify-end">
                     <dt className="text-[9px] sm:text-xs leading-tight sm:leading-normal font-semibold text-slate-500 mb-1 sm:mb-1.5 uppercase tracking-wide sm:tracking-wider">{stat.label}</dt>
-                    <dd className="text-lg sm:text-3xl font-bold text-slate-900 tracking-tight mt-auto">{stat.value}</dd>
+                    <dd className="text-lg sm:text-3xl font-bold text-slate-900 tracking-tight mt-auto">
+                      <Counter value={stat.value} />
+                    </dd>
                   </div>
                 ))}
               </dl>
