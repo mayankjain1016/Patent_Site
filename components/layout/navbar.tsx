@@ -81,18 +81,18 @@ export function Navbar() {
           <Link
             href="#hero"
             onClick={(e) => handleNavClick(e, '#hero')}
-            className="flex shrink-0 items-center gap-3 outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md"
+            className="flex h-full py-1 shrink-0 items-center outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
           >
-            <div className="relative h-12 w-12 overflow-hidden rounded-md border border-slate-200/50 bg-white">
-              <Image
-                src="/images/logo.jpg"
-                alt={`${SITE_NAME} Logo`}
-                fill
-                sizes="48px"
-                className="object-cover"
-                priority
-              />
-            </div>
+            <Image
+              src="/images/logo.jpg"
+              alt={`${SITE_NAME} Logo`}
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="h-full w-auto object-contain scale-110 origin-left"
+              style={{ width: 'auto', height: '100%' }}
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

@@ -34,27 +34,29 @@ export function WhoWeHelp() {
         <StaggerContainer className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {CLIENT_TYPES.map(({ Icon, title, description }) => (
             <StaggerItem key={title}>
-              <div className="group relative flex h-full flex-col rounded-2xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-300">
+              <div className="group relative h-full rounded-2xl bg-slate-200/80 p-[1px] shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:bg-gradient-to-br hover:from-blue-500 hover:via-sky-400 hover:to-blue-500 hover:shadow-xl hover:shadow-blue-900/10">
+                <div className="flex h-full flex-col rounded-2xl bg-white p-8">
+                  
+                  {/* Icon Container */}
+                  <div className="mb-6 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-slate-100 bg-slate-50 transition-colors duration-300 group-hover:border-blue-100 group-hover:bg-blue-50/50">
+                    <Icon
+                      className="h-6 w-6 text-slate-500 transition-colors duration-300 group-hover:text-blue-600"
+                      strokeWidth={1.5}
+                      aria-hidden="true"
+                    />
+                  </div>
 
-                {/* Premium Icon Container */}
-                <div className="mb-6 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-slate-100 bg-slate-50 transition-colors duration-300 group-hover:border-blue-100 group-hover:bg-blue-50/50">
-                  <Icon
-                    className="h-6 w-6 text-slate-500 transition-colors duration-300 group-hover:text-blue-600"
-                    strokeWidth={1.5}
-                    aria-hidden="true"
-                  />
+                  {/* Content */}
+                  <div className="flex-1">
+                    <h3 className="mb-3 font-sans text-base font-semibold text-slate-900">
+                      {title}
+                    </h3>
+                    <p className="text-justify text-pretty text-sm leading-relaxed text-slate-600">
+                      {description}
+                    </p>
+                  </div>
+
                 </div>
-
-                {/* Content */}
-                <div>
-                  <h3 className="mb-3 font-sans text-base font-semibold text-slate-900">
-                    {title}
-                  </h3>
-                  <p className="text-justify text-pretty text-sm leading-relaxed text-slate-600">
-                    {description}
-                  </p>
-                </div>
-
               </div>
             </StaggerItem>
           ))}

@@ -60,6 +60,7 @@ export const SERVICES: Service[] = [
     description:
       'Identify existing patent and non-patent references relevant to an invention before filing or strategy decisions. Comprehensive research across global patent publications.',
     Icon: ScanSearch,
+    image: '/images/Services/Prior.jpg',
   },
   {
     id: 'patentability',
@@ -68,6 +69,7 @@ export const SERVICES: Service[] = [
     description:
       'Assess whether an invention appears novel and inventive in view of available technical disclosures. Evaluate novelty, inventive step, and industrial applicability.',
     Icon: ShieldCheck,
+    image: '/images/Services/Patentability.jpg',
   },
   {
     id: 'invalidation',
@@ -76,6 +78,7 @@ export const SERVICES: Service[] = [
     description:
       'Locate strong references that may support patent challenge, opposition, or litigation-related analysis. Strategic research for IP disputes and enforcement.',
     Icon: Scale,
+    image: '/images/Services/Invalidation.jpg',
   },
   {
     id: 'fto',
@@ -84,6 +87,7 @@ export const SERVICES: Service[] = [
     description:
       'Assist in identifying patent documents that may be relevant before launching or commercializing a technology. Reduce risk before market entry.',
     Icon: Globe2,
+    image: '/images/Services/Freedom.jpg',
   },
   {
     id: 'landscape',
@@ -92,6 +96,7 @@ export const SERVICES: Service[] = [
     description:
       'Map technology trends, key players, filing patterns, and innovation activity in a technical field. Strategic intelligence for R&D and business decisions.',
     Icon: BarChart3,
+    image: '/images/Services/Patent.jpeg',
   },
   {
     id: 'technical-analysis',
@@ -100,6 +105,7 @@ export const SERVICES: Service[] = [
     description:
       'Review patent documents and explain their relevance in clear technical language. Structured analysis of novelty, claim mapping, and technical comparison.',
     Icon: FileSearch,
+    image: '/images/Services/Technical.jpeg',
   },
 ];
 

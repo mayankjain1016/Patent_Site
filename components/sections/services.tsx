@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { CheckCircle2 } from 'lucide-react';
 import { SectionOverline } from '@/components/ui/badge';
 import { Reveal, StaggerContainer, StaggerItem } from '@/components/ui/reveal';
@@ -37,18 +38,34 @@ export function Services() {
                   aria-labelledby={`service-${service.id}`}
                 >
                   {/* Header Row: Icon & Number */}
-                  <div className="mb-6 flex items-center justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-slate-600">
-                      <Icon
-                        className="h-6 w-6"
-                        strokeWidth={1.5}
-                        aria-hidden="true"
-                      />
-                    </div>
+                  <div className="mb-4 flex items-center justify-between">
+                    {!service.image ? (
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-slate-600">
+                        <Icon
+                          className="h-6 w-6"
+                          strokeWidth={1.5}
+                          aria-hidden="true"
+                        />
+                      </div>
+                    ) : (
+                      <div /> /* Spacer to push number to right */
+                    )}
                     <span className="font-mono text-sm font-bold tracking-widest text-slate-300">
                       {service.number}
                     </span>
                   </div>
+
+                  {/* Card Image */}
+                  {service.image && (
+                    <div className="relative w-full h-40 sm:h-48 lg:h-52 mb-6">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-contain object-center"
+                      />
+                    </div>
+                  )}
 
                   {/* Content */}
                   <h3

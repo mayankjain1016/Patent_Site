@@ -6,6 +6,7 @@ export interface Service {
   title: string;
   description: string;
   Icon: LucideIcon;
+  image?: string;
 }
 
 export interface ExpertiseDomain {
